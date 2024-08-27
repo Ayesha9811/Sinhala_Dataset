@@ -1,16 +1,17 @@
-import streamlit as st # type: ignore
+import streamlit as st
 import json
-from huggingface_hub import HfApi, hf_hub_download, hf_hub_url # type: ignore
-import pandas as pd # type: ignore
+from huggingface_hub import HfApi, hf_hub_download, hf_hub_url
+import pandas as pd
 import io
 
 # Hugging Face API setup
 hf_api = HfApi()
 
+
 # Predefined values
-REPO_NAME = "AyeshaKalpani98/Questions_Answers_In_Sinhala_Language"
-HF_TOKEN = "Fine_Tune_Testing"
-DATA_FILENAME = "data.jsonl"
+REPO_NAME = "AyeshaKalpani98/Sinhala_Question_Answer_Generation"
+HF_TOKEN = "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"
+DATA_FILENAME = "data.json"
 
 # Initialize session state
 if "messages" not in st.session_state:
